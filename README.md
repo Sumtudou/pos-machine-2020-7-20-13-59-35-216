@@ -1,72 +1,26 @@
-# Requirement
-A cash register (POS) system is used in the store for settlement of the store. This cashier will settle and print the receipt (Receipt) according to the item(Item) in the customer's shopping cart (Cart) at the time of settlement.
+### 1.上下文图
 
-We need to implement a function called printReceipt, which can input the data of the specified format as a parameter and then output the text of the receipt in the browser console.
+![](http://sumtudou.oss-cn-shanghai.aliyuncs.com/something/cash.jpg)
 
-This time, the input will be an array of barcodes (string). For example:
-```javascript
-[
-  'ITEM000000',
-  'ITEM000000',
-  'ITEM000000',
-  'ITEM000000',
-  'ITEM000000',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000004'
-]
-```
+### 2.所有方法
 
-Then the output should be 
-```
-***<store earning no money>Receipt ***
-Name: Coca-Cola, Quantity: 5, Unit price: 3 (yuan), Subtotal: 15 (yuan)
-Name: Sprite, Quantity: 2, Unit price: 3 (yuan), Subtotal: 6 (yuan)
-Name: Battery, Quantity: 1, Unit price: 2 (yuan), Subtotal: 2 (yuan)
-----------------------
-Total: 23 (yuan)
-**********************
-```
+1. countGoodsNum()
+   - 输入：条形码列表。
+   - 输出：各类条形码及其出现次数的Map。
+2. findGoods()
+   - 输入：各类条形码及其出现次数的Map。
+   - 输出：一个Json对象，包括条形码对应商品的所有信息。
+3. getEachGoodsPrice()
+   - 输入：一个Json对象，包括条形码对应商品的所有信息。
+   - 输出：每类商品的小总价的列表。
+4. countGoodsTotalPrice()
+   - 输入：每类商品的小总价的列表。
+   - 输出：所有商品的总价。
+5. formatReceipt()
+   - 输入：一个Json对象，包括条形码对应商品的所有信息以及总价。
+   - 输出：已经格式化好的账单字符串。
 
-Suppose that our database is as follows:
-```javascript
-[
-   {
-      barcode: 'ITEM000000',
-      name: 'Coca-Cola',
-      price: 3
-    },
-    {
-      barcode: 'ITEM000001',
-      name: 'Sprite',
-      price: 3
-    },
-    {
-      barcode: 'ITEM000002',
-      name: 'Apple',
-      price: 5
-    },
-    {
-      barcode: 'ITEM000003',
-      name: 'Litchi',
-      price: 15
-    },
-    {
-      barcode: 'ITEM000004',
-      name: 'Battery',
-      price: 2
-    },
-    {
-      barcode: 'ITEM000005',
-      name: 'Instant Noodles',
-      price: 4
-    }
-]
-```
+### 3,4 功能实现
 
-# Principal
+&emsp;&emsp;实现见代码，即根目录下的main.js
 
-1. Please draw context diagram.
-2. Please declare all the methods according to your diagram.
-3. Please implement the function according to the context diagram
-4. Please repeat step 3 until all functions are implemented.
