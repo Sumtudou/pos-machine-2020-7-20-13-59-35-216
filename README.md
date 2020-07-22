@@ -26,7 +26,7 @@
 
 &emsp;&emsp;实现见代码，即根目录下的main.js
 
-5.PDCA分析
+### 5.PDCA分析
 
 | 方法名 | countGoodsNum() |
 | :----: | :-------------: |
