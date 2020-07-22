@@ -8,9 +8,9 @@ describe('print receipt', () => {
                 'ITEM000000',
                 'ITEM000000',
                 'ITEM000000',
+                'ITEM000001',
+                'ITEM000001',
                 'ITEM000000',
-                'ITEM000001',
-                'ITEM000001',
                 'ITEM000004'
             ];
 
